@@ -9,7 +9,7 @@ You can find the code used in our article about construction of Full Connected N
 
 Firstly, each Python file, along with its corresponding calculated data file(s), should be placed in separate folders. The packages tensorflow v 2.14.0 and shap v 0.41.0 should be installed correctly.
   
-To construct the FCNN model, you will need the following files: "construction and train for FCNN.py" and "all.txt". The "all.txt" file contains a table that includes the feature values and relative GFP abundance of all samples, excluding the header (the feature names). You can change the time of training by changing the value of the parameter *time_of_repeating_training*. 
+To construct the FCNN model, you will need the following files: "construction and train for FCNN.py" and "all.txt". The "all.txt" file contains a table that includes the feature values and relative GFP abundance of all samples, excluding the header (the feature names). You can change the time of repeating training by changing the value of the parameter *time_of_repeating_training*. 
   
 For prediction, you will need the following files: "prediction through model.py", "model.h5" (the selected file that contains the saved weights), and "input.txt". The "input.txt" file contains a table of new 5' UTR sequences' feature values, where the feature rank remains consistent with the previous data.
   
