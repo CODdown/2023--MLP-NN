@@ -1,8 +1,3 @@
-# name ZHS
-# class Pass
-# time 2022/10/6/0006 12:13
-# -*- coding:utf-8 -*-
-
 from tensorflow.python.keras.layers import Dense
 from tensorflow.python.keras.layers import Flatten
 from tensorflow.python.keras import Sequential
