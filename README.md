@@ -7,10 +7,10 @@ You can find the code used in our article about construction of Full Connected N
 
 ## Note
 
-First of all, each python file with its required calculated data file(s) should be placed in one folder separately.
-The construction of FCNN model needs "construction and train for FCNN.py" and "all.txt" containing the table comprising features values and relative GFP abundance of all samples without the header (feature names).
-The prediction needs "prediction through model.py", "model.h5" which is the selected weights-saved file and "input.txt" which contains the new 5' UTR sequences' feature value table, in which the rank of features keeps the same as before.
-The sensitivity analysis needs "SHAP sensitivity analysis.py", "model.h5" and "input.txt" which contains the feature value table with header (feature names as the first row) of train set.
+First of all, each python file with its required calculated data file(s) should be placed in one folder separately.  
+The construction of FCNN model needs "construction and train for FCNN.py" and "all.txt" containing the table comprising features values and relative GFP abundance of all samples without the header (feature names).  
+The prediction needs "prediction through model.py", "model.h5" which is the selected weights-saved file and "input.txt" which contains the new 5' UTR sequences' feature value table, in which the rank of features keeps the same as before.  
+The sensitivity analysis needs "SHAP sensitivity analysis.py", "model.h5" and "input.txt" which contains the feature value table with header (feature names as the first row) of train set.  
 
 
 ## Code
