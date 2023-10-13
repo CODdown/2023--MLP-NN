@@ -7,7 +7,7 @@ You can find the code used in our article about construction of Full Connected N
 
 ## Note
 
-Firstly, each Python file, along with its corresponding calculated data file(s), should be placed in separate folders. The tensorflow v 2.14.0 and shap v 0.41.0 should be installed correctly.
+Firstly, each Python file, along with its corresponding calculated data file(s), should be placed in separate folders. The packages tensorflow v 2.14.0 and shap v 0.41.0 should be installed correctly.
   
 To construct the FCNN model, you will need the following files: "construction and train for FCNN.py" and "all.txt". The "all.txt" file contains a table that includes the feature values and relative GFP abundance of all samples, excluding the header (the feature names).
   
