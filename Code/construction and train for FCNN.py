@@ -131,7 +131,7 @@ for i in range(0, time_of_repeating_training):
     DNN_callback = tf.keras.callbacks.ModelCheckpoint(filepath=h5_save_path,
                                                 save_weights_only=True,
                                                 verbose=0,
-                                                save_best_only=True)
+                                                save_best_only=False)
     DNN_earlystop = tf.keras.callbacks.EarlyStopping(patience=250,
                                                      monitor="val_loss",
                                                      mode="min")
