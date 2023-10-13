@@ -5,7 +5,10 @@
 ## introduction
 You can find the code used in our article about construction of Full Connected Neural Network (FCNN) model using a mini-library from *Kluyveromyces marxianus* and  how to perform prediction of the model and SHapley Additive exPlanation (SHAP) sensitivity analysis of features.
 
-First of all, each python file with its required calculated data file(s) should be placed in one folder separately. The construction of FCNN model needs "construction and train for FCNN.py" and "all.txt" containing the sheet comprising features values and relative GFP abundance of all samples without
+First of all, each python file with its required calculated data file(s) should be placed in one folder separately.
+The construction of FCNN model needs "construction and train for FCNN.py" and "all.txt" containing the table comprising features values and relative GFP abundance of all samples without the header (feature names).
+The prediction needs "prediction through model.py", "model.h5" which is the selected weights-saved file and "input.txt" which contains the new 5' UTR sequences' feature value table, in which the rank of features keeps the same as before.
+The sensitivity analysis needs "SHAP sensitivity analysis.py", "model.h5" and "input.txt" which contains the feature value table with header (feature names as the first row) of train set.
 
 ## Note
 
