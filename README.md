@@ -9,3 +9,4 @@ First of all, each python file with its required calculated data file(s) should 
 
 
 ## Code
+[FCNN model](https://github.com/CODdown/2023--FCNN/tree/main/Code/construction%20and%20train%20for%20FCNN.py)
