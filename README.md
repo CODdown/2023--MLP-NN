@@ -9,4 +9,6 @@ First of all, each python file with its required calculated data file(s) should 
 
 
 ## Code
-[FCNN model](https://github.com/CODdown/2023--FCNN/tree/main/Code/construction%20and%20train%20for%20FCNN.py)
+[FCNN model](https://github.com/CODdown/2023--FCNN/tree/main/Code/construction%20and%20train%20for%20FCNN.py): Python code used to construct and train the FCNN model
+[prediciton](https://github.com/CODdown/2023--FCNN/tree/main/Code/prediction%20through%20model.py): Python code used to predict the GFP abundacne of new sequence with new calculated feature values using selected and saved model.
+[sensitivity analysis](https://github.com/CODdown/2023--FCNN/tree/main/Code/SHAP%20sensitivity%20analysis.py): Python code used to perform the SHAP sensitivity analysis of features of train set.
