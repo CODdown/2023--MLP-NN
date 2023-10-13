@@ -7,14 +7,13 @@ You can find the code used in our article about construction of Full Connected N
 
 ## Note
 
-First of all, each python file with its required calculated data file(s) should be placed in one folder separately.  
+Firstly, each Python file, along with its corresponding calculated data file(s), should be placed in separate folders.
   
-**The construction of FCNN model** needs "construction and train for FCNN.py" and "all.txt" containing the table comprising features values and relative GFP abundance of all samples without the header (feature names).  
+To construct the FCNN model, you will need the following files: "construction and train for FCNN.py" and "all.txt". The "all.txt" file contains a table that includes the feature values and relative GFP abundance of all samples, excluding the header (the feature names).
   
-**The prediction** needs "prediction through model.py", "model.h5" which is the selected weights-saved file and "input.txt" which contains the new 5' UTR sequences' feature value table, in which the rank of features keeps the same as before.  
+For prediction, you will need the following files: "prediction through model.py", "model.h5" (the selected file that contains the saved weights), and "input.txt". The "input.txt" file contains a table of new 5' UTR sequences' feature values, where the feature rank remains consistent with the previous data.
   
-**The sensitivity analysis** needs "SHAP sensitivity analysis.py", "model.h5" and "input.txt" which contains the feature value table with header (feature names as the first row) of train set.  
-
+For sensitivity analysis, the following files are required: "SHAP_sensitivity_analysis.py", "model.h5", and "input.txt". The "input.txt" file contains a feature value table with a header (where the feature names are listed as the first row) from the training set. The header will facilitate the plot of SHAP sensitivity analysis.
 
 ## Code
 [FCNN model](https://github.com/CODdown/2023--FCNN/tree/main/Code/construction%20and%20train%20for%20FCNN.py): Python code used to construct and train the FCNN model  
