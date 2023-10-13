@@ -1,8 +1,3 @@
-# name ZHS
-# class Pass
-# time 2022/9/16/0016 11:03
-# -*- coding:utf-8 -*-
-
 import tensorflow as tf
 import numpy as np
 from tensorflow.python.keras.layers import Dense
