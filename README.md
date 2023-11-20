@@ -1,4 +1,4 @@
-# 2023--FCNN
+# 2023--MLP-NN
 
 # Code from the article, "Characterization and optimization of 5’ untranslated region containing poly-adenine tracts in *Kluyveromyces marxianus* using machine-learning model"
 
