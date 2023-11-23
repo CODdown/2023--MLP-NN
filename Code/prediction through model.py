@@ -1,18 +1,16 @@
-from tensorflow.python.keras.layers import Dense
-from tensorflow.python.keras.layers import Flatten
-from tensorflow.python.keras import Sequential
+import tensorflow as tf
 import numpy as np
 import os
 
 number_of_features = 15
 
 h5_load_path = "./model.h5" #  *** Important! Please change the file name of the model saved for use before.
-model1 = Sequential([
-    Flatten(input_shape=(number_of_features, )),
-    Dense(350, activation='relu'), #  *** The parameters should be modified to be same as those used to construct the model.
-    Dense(350, activation='relu'), #  *** The parameters should be modified to be same as those used to construct the model.
-    Dense(350, activation='relu'), #  *** The parameters should be modified to be same as those used to construct the model.
-    Dense(1, activation='linear')
+model1 = tf.keras.models.Sequential([
+    tf.keras.layers.Flatten(input_shape=(number_of_features, )),
+    tf.keras.layers.Dense(350, activation='relu'), #  *** The parameters should be modified to be same as those used to construct the model.
+    tf.keras.layers.Dense(350, activation='relu'), #  *** The parameters should be modified to be same as those used to construct the model.
+    tf.keras.layers.Dense(350, activation='relu'), #  *** The parameters should be modified to be same as those used to construct the model.
+    tf.keras.layers.Dense(1, activation='linear')
 ])
 
 if os.path.exists(h5_load_path):
