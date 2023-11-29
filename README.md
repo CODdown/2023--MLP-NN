@@ -16,6 +16,7 @@ For prediction, you will need the following files: "prediction through model.py"
 For sensitivity analysis, the following files are required: "SHAP_sensitivity_analysis.py", "model.h5", and "input.txt". The "input.txt" file contains a feature value table with a header (where the feature names are listed as the first row) from the training set. The header will facilitate the plot of SHAP sensitivity analysis.
 
 ## Code
-[MLP-NN model](https://github.com/CODdown/2023--MLP-NN/tree/main/Code/construction%20and%20train%20for%20MLP-NN.py): Python code used to construct and train the MLP-NN model  
+[MLP-NN model](https://github.com/CODdown/2023--MLP-NN/tree/main/Code/construction%20and%20train%20for%20MLP-NN.py): Python code used to construct and train the MLP-NN model
+[cross-validation](https://github.com/CODdown/2023--MLP-NN/tree/main/Code/cross-validation.py): Python code used to perform n-fold cross-validation
 [prediciton](https://github.com/CODdown/2023--MLP-NN/tree/main/Code/prediction%20through%20model.py): Python code used to predict the GFP abundacne of new sequence with new calculated feature values using selected and saved model  
 [sensitivity analysis](https://github.com/CODdown/2023--MLP-NN/tree/main/Code/SHAP%20sensitivity%20analysis.py): Python code used to perform the SHAP sensitivity analysis of features of train set  
