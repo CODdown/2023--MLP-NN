@@ -5,9 +5,9 @@ import os
 
 
 number_of_features = 15
-time_of_repeating_training = 3
-
-
+time_of_repeating_training = 1
+condition = input("""Please enter '1' to proceed with the training process, after optimizing the hyper-parameters through cross-validation,\nor enter '0' to perform only a training-test split.\n""")
+condition = int(condition)
 # the load/save paths of raw files containing test set or train set
 all_path = './all.txt'
 train_path = './train.txt'
@@ -108,37 +108,36 @@ if not os.path.exists(model_save_dict):
     os.mkdir(model_save_dict)
 
 # training of model
-for i in range(0, time_of_repeating_training):
-    # construction of model
-    model1 = tf.keras.models.Sequential([
-        tf.keras.layers.Flatten(input_shape=(number_of_features,)),
-        tf.keras.layers.Dense(350, activation='relu'),
-        tf.keras.layers.Dense(350, activation='relu'),
-        tf.keras.layers.Dense(350, activation='relu'),
-        tf.keras.layers.Dense(1, activation='linear')
-    ])
+if condition == 1:
+    for i in range(0, time_of_repeating_training):
+        # construction of model
+        # the hyper-parameters (the number of layers and the number of units per layer) should be changed to the most optimal obtained from cross-validation.
+        model1 = tf.keras.models.Sequential([
+            tf.keras.layers.Flatten(input_shape=(number_of_features,)),
+            tf.keras.layers.Dense(300, activation='relu'),
+            tf.keras.layers.Dense(300, activation='relu'),
+            tf.keras.layers.Dense(300, activation='relu'),
+            tf.keras.layers.Dense(1, activation='linear')
+        ])
 
-    # show the structure of the model
-    model1.summary()
-    model1.compile(optimizer='Adam',
-                   loss='mse')
+        # show the structure of the model
+        model1.summary()
+        model1.compile(optimizer='Adam',
+                       loss='mse')
 
-    # save the model
-    rep_save_dict = "./model/rep" + str(i + 1)
-    if not os.path.exists(rep_save_dict):
-        os.mkdir(rep_save_dict)
-    h5_save_path = rep_save_dict + "/model_{epoch:03d}-loss_{loss:.4f}-val_loss_{val_loss:.4f}.h5"
-    DNN_callback = tf.keras.callbacks.ModelCheckpoint(filepath=h5_save_path,
-                                                save_weights_only=True,
-                                                verbose=0,
-                                                save_best_only=False)
-    DNN_earlystop = tf.keras.callbacks.EarlyStopping(patience=250,
-                                                     monitor="val_loss",
-                                                     mode="min")
-    history = model1.fit(x_train, y_train,
-                         batch_size=256, epochs=1500, shuffle=True,
-                         validation_data=(x_test, y_test), validation_freq=1,
-                         callbacks=[DNN_callback, DNN_earlystop])
-
-
-
+        # save the model
+        rep_save_dict = "./model/rep" + str(i + 1)
+        if not os.path.exists(rep_save_dict):
+            os.mkdir(rep_save_dict)
+        h5_save_path = rep_save_dict + "/model_{epoch:03d}-loss_{loss:.4f}-val_loss_{val_loss:.4f}.h5"
+        DNN_callback = tf.keras.callbacks.ModelCheckpoint(filepath=h5_save_path,
+                                                    save_weights_only=True,
+                                                    verbose=0,
+                                                    save_best_only=False)
+        DNN_earlystop = tf.keras.callbacks.EarlyStopping(patience=150,
+                                                         monitor="val_loss",
+                                                         mode="min")
+        history = model1.fit(x_train, y_train,
+                             batch_size=256, epochs=1000, shuffle=True,
+                             validation_data=(x_test, y_test), validation_freq=1,
+                             callbacks=[DNN_callback, DNN_earlystop])
